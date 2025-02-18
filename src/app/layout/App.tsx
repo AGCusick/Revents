@@ -1,10 +1,15 @@
-
+import EventDashboard from "@/features/events/dashboard/dashboard/EventDashboard"
+import NavBar from "./nav/NavBar"
+import { useState } from "react"
 function App() {
-
+ const [formOpen, setFormOpen] = useState(false)
   return (
-    <h1>
-      Welcome to Revents
-    </h1>
+    < >
+   
+    <NavBar setFormOpen={setFormOpen} />
+    <EventDashboard setFormOpen={setFormOpen} formOpen={formOpen} />
+
+    </>
   )
 }
 
